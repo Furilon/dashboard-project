@@ -174,21 +174,74 @@ body {
     grid-template: repeat(2, 1fr) / repeat(5, 1fr);
     grid-template-areas:
         "search search search account account"
-        "greeting freeting . buttons buttons";
+        "greeting greeting . buttons buttons";
 }
 
 #search {
     grid-area: search;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 50px;
+}
+
+#search-bar {
+    margin-left: 30px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    width: 100%;
+    height: 2.3rem;
+    background-color: #E2E8F0;
+    border: none;
+    border-radius: 15px;
 }
 
 #account {
+    margin-top: 30px;
     grid-area: account;
+    display: flex;
+    justify-content: space-around;
 }
 
 #greeting {
     grid-area: greeting;
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+#greeting > img {
+    margin: 10px 40px 0px 50px;
+}
+
+#greeting > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#greeting-name {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 #header-btns {
-    grid-area: buttons
+    grid-area: buttons;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#header-btns > button {
+    background-color: #1992D4;
+    width: 180px;
+    font-size: 1.4rem;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 50px
+}
+
+#header-btns > button:hover {
+    box-shadow: 0 2px 5px gray;
 }
